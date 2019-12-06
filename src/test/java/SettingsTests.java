@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 import static java.time.Duration.ofSeconds;
 
 public class SettingsTests extends BaseClass {
@@ -38,13 +40,9 @@ public class SettingsTests extends BaseClass {
     }
 
     public void goToAccountFromSignIn() {
-        MobileElement signInButton = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/sign_in_button");
-        MobileElement usernameField = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/username");
-        MobileElement passwordField = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/password");
+        WebDriverWait wait = new WebDriverWait(driver, 3);
 
-        usernameField.sendKeys("onelocal");
-        passwordField.sendKeys("2525Smart");
-        signInButton.click();
+        signIn();
         MobileElement accountButton = (MobileElement) driver.findElementByAccessibilityId("Navigate up");
         accountButton.click();
         verifyAccountScreenUI();
@@ -62,7 +60,6 @@ public class SettingsTests extends BaseClass {
         MobileElement signOutButton = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/sign_out_button");
         signOutButton.click();
 
-        MobileElement signInButton = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/sign_in_button");
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id(String.valueOf("com.godaddy.smartline.alpha:id/sign_in_button"))));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id(("com.godaddy.smartline.alpha:id/description"))));
     }
 }

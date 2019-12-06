@@ -8,13 +8,7 @@ import static org.junit.Assert.assertTrue;
 public class ContactsTests extends BaseClass {
 
     public void goToContactsFromSignIn() {
-        MobileElement usernameField = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/username");
-        MobileElement passwordField = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/password");
-        MobileElement signInButton = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/sign_in_button");
-
-        usernameField.sendKeys("onelocal");
-        passwordField.sendKeys("2525Smart");
-        signInButton.click();
+        signIn();
         List<MobileElement> contactsBottomNav = driver.findElementsByAccessibilityId("Contacts");
         contactsBottomNav.get(0).click();
     }
