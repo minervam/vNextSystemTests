@@ -7,11 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-
 import static java.time.Duration.ofSeconds;
 
-public class SettingsTests extends BaseClass {
+public class androidSettingsTests extends androidBaseClass {
 
     public void swipeDown() {
         TouchAction swipeDown = new TouchAction(driver);
@@ -40,8 +38,6 @@ public class SettingsTests extends BaseClass {
     }
 
     public void goToAccountFromSignIn() {
-        WebDriverWait wait = new WebDriverWait(driver, 3);
-
         signIn();
         MobileElement accountButton = (MobileElement) driver.findElementByAccessibilityId("Navigate up");
         accountButton.click();

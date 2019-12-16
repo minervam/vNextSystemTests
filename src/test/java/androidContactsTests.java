@@ -5,7 +5,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
-public class ContactsTests extends BaseClass {
+public class androidContactsTests extends androidBaseClass {
 
     public void goToContactsFromSignIn() {
         signIn();

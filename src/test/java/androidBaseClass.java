@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class BaseClass {
+public class androidBaseClass {
         AppiumDriver driver;
         public static final String URL = "http://127.0.0.1:4723/wd/hub";
 
@@ -38,7 +38,6 @@ public class BaseClass {
         MobileElement dialerBottomNav = (MobileElement) driver.findElementByAccessibilityId("Dialer");
         MobileElement contactsBottomNav = (MobileElement) driver.findElementByAccessibilityId("Contacts");
 
-
         accountButton.isDisplayed();
         homeBottomNav.isDisplayed();
         dialerBottomNav.isDisplayed();
@@ -58,7 +57,6 @@ public class BaseClass {
         signInButton.click();
         verifyHomeScreenUI();
     }
-
 
     @After
     public void teardown() {

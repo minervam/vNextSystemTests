@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.*;
 
-public class SignInTests extends BaseClass {
+public class androidSignInTests extends androidBaseClass {
 
     public void verifySignInScreenUI() {
         MobileElement forgotButton = (MobileElement) driver.findElementById("com.godaddy.smartline.alpha:id/forgot");
